@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 app.get("/",(req,res)=>{
     res.send("Hello World");
 })
-app.post()
+
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
 
