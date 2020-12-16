@@ -99,16 +99,16 @@ const isvalidDivision=(num1,num2)=>{
 }
 
 app.post("/add",(req,res)=>{
-    res.send(req.body.num1,req.body.num2,"add");
+    res.send(isValidInput(req.body.num1,req.body.num2,"add"));
 })
 app.post("/sub",(req,res)=>{
-    res.send(req.body.num1,req.body.num2,"dif");
+    res.send(isValidInput(req.body.num1,req.body.num2,"dif"));
 })
 app.post("/multiply",(req,res)=>{
-    res.send(req.body.num1,req.body.num2,"mul");
+    res.send(isValidInput(req.body.num1,req.body.num2,"mul"));
 })
 app.post("/divide",(req,res)=>{
-    res.send(req.body.num1,req.body.num2,"div");
+    res.send(isValidInput(req.body.num1,req.body.num2,"div"));
 })
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))
