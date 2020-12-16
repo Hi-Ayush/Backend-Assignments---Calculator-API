@@ -92,7 +92,7 @@ const isValidInput=(num1,num2,operation)=>{
         return({status: "error",message:"Overflow"});
     }
    
-    if(operartion==="add"){
+    if(operation==="add"){
         isValidAddition(num1,num2);
     };
     if(operation==="dif"){
