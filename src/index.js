@@ -80,7 +80,9 @@ const isValidInput=(num1,num2,operation)=>{
 
     num1=parseFloat(num1);
     num2=parseFloat(num2);
-    if(isNaN(num1)||isNaN(num2)){
+    
+    if(typeof(num1)==="string"||typeof(num2)==="string"){
+        
         return ({status: "error",message:"Invalid data types"});
     }
 
@@ -93,20 +95,20 @@ const isValidInput=(num1,num2,operation)=>{
     }
    
     if(operation==="add"){
-        isValidAddition(num1,num2);
-        return;
+        return isValidAddition(num1,num2);
+        
     };
     if(operation==="dif"){
-        isValidSubtraction(num1,num2);
-        return;
+        return  isValidSubtraction(num1,num2);
+        
     }
     if(operation==="mul"){
-        isValidMultiplication(num1,num2);
-        return;
+        return isValidMultiplication(num1,num2);
+        
     }
     if(operation==="div"){
-        isValidDivision(num1,num2);
-        return;
+        return  isValidDivision(num1,num2);
+    
     }
 }
 
