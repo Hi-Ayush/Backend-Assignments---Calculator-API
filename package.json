@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
-    "start": "node src/index.js"
+    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "4.17.1",
     "mochawesome": "6.1.1"
   },
   "devDependencies": {
