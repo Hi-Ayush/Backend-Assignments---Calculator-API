@@ -77,15 +77,20 @@ const isValidDivision=(num1,num2)=>{
 }
 
 const isValidInput=(num1,num2,operation)=>{
+
+    if(isNaN(num1)||isNaN(num2)){
+        return ({status: "error",message:"Invalid data types"});
+    }
+
+    num1=parseFloat(num1);
+    num2=parseFloat(num2);    
     if(num1<-1000000||num2<-1000000){
         return ({status: "error",message:"Underflow"});
     }
     if(num1>1000000||num2>1000000){
         return({status: "error",message:"Overflow"});
     }
-    if(isNaN(num1)||isNaN(num2)){
-        return ({status: "error",message:"Invalid data types"});
-    }
+   
     if(operartion==="add"){
         isValidAddition(num1,num2);
     };
