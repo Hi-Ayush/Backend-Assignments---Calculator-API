@@ -76,7 +76,7 @@ const isValidDivision=(num1,num2)=>{
     }
 }
 
-const isVaildInput=(num1,num2,operation)=>{
+const isValidInput=(num1,num2,operation)=>{
     if(num1<-1000000||num2<-1000000){
         return ({status: "error",message:"Underflow"});
     }
