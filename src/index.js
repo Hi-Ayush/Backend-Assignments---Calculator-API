@@ -94,15 +94,19 @@ const isValidInput=(num1,num2,operation)=>{
    
     if(operation==="add"){
         isValidAddition(num1,num2);
+        return;
     };
     if(operation==="dif"){
         isValidSubtraction(num1,num2);
+        return;
     }
     if(operation==="mul"){
         isValidMultiplication(num1,num2);
+        return;
     }
     if(operation==="div"){
         isValidDivision(num1,num2);
+        return;
     }
 }
 
