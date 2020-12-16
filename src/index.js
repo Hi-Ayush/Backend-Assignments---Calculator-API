@@ -15,29 +15,7 @@ app.use(bodyParser.json())
 app.get("/",(req,res)=>{
     res.send("Hello World");
 })
- const isVaildInput=(num1,num2,operation)=>{
-    if(num1<-1000000||num2<-1000000){
-        return ({status: "error",message:"Underflow"});
-    }
-    if(num1>1000000||num2>1000000){
-        return({status: "error",message:"Overflow"});
-    }
-    if(isNaN(num1)||isNaN(num2)){
-        return ({status: "error",message:"Invalid data types"});
-    }
-    if(operartion==="add"){
-        isValidAddition(num1,num2);
-    };
-    if(operation==="dif"){
-        isValidSubtraction(num1,num2);
-    }
-    if(operation==="mul"){
-        isValidMultiplication(num1,num2);
-    }
-    if(operation==="div"){
-        isvalidDivision(num1,num2);
-    }
-}
+
 
 const isValidAddition=(num1,num2)=>{
     if(num1+num2>1000000){
@@ -85,7 +63,7 @@ const isValidMultiplication=(num1,num2)=>{
     }
 }
 
-const isvalidDivision=(num1,num2)=>{
+const isValidDivision=(num1,num2)=>{
     if(num2===0){
         return ({status: "error",message:"Cannot divide by zero"});
     }
@@ -95,6 +73,30 @@ const isvalidDivision=(num1,num2)=>{
             message:"The division of given numbers",
             result: num1/num2
         });
+    }
+}
+
+const isVaildInput=(num1,num2,operation)=>{
+    if(num1<-1000000||num2<-1000000){
+        return ({status: "error",message:"Underflow"});
+    }
+    if(num1>1000000||num2>1000000){
+        return({status: "error",message:"Overflow"});
+    }
+    if(isNaN(num1)||isNaN(num2)){
+        return ({status: "error",message:"Invalid data types"});
+    }
+    if(operartion==="add"){
+        isValidAddition(num1,num2);
+    };
+    if(operation==="dif"){
+        isValidSubtraction(num1,num2);
+    }
+    if(operation==="mul"){
+        isValidMultiplication(num1,num2);
+    }
+    if(operation==="div"){
+        isValidDivision(num1,num2);
     }
 }
 
